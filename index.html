@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>rich man's reddit</title>
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body ng-app="redditMod" ng-controller="redditController">
+    <nav>
+        <form name="subredditForm">
+            <input type="text" ng-required="true" ng-model="subreddit" placeholder="Choose a subreddit">
+            <button type="button" ng-disabled="subredditForm.$invalid">Display posts</button>
+        </form>
+    </nav>
+    <div>
+        <post ng-repeat="post in posts"></post>
+    </div>
+
+    <script src="ng/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="firstController.js"></script>
+</body>
+
+</html>
