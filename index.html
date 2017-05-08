@@ -10,7 +10,7 @@
 
 <body ng-app="redditMod" ng-controller="redditController">
     <nav>
-        <form name="subredditForm">
+        <form name="subredditForm" ng-submit="findPosts(subreddit)">
             <input type="text" ng-required="true" ng-model="subreddit" placeholder="Choose a subreddit">
             <button type="button" ng-disabled="subredditForm.$invalid">Display posts</button>
         </form>
